@@ -13,12 +13,19 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     addToCart: (state, action) => {
-      let find = state.cart.findIndex((item) => item.id === action.payload.id);
-      if (find >= 0) {
-        state.cart[find].quantity += 1;
-      } else {
+
         state.cart.push(action.payload);
-      }
+      
+
+      // rough(){
+        
+      // let find = state.cart.findIndex((item) => item.id === action.payload.id);
+      // if (find >= 0) {
+      //   state.cart[find].quantity += 1;
+      // } else {
+      //   state.cart.push(action.payload);
+      // }
+      // }
       
     },
 
